@@ -5,7 +5,7 @@
     "manifest_version": 2,
     "permissions": [
     	"activeTab",
-    	"https://soundcloud.com/*",
+    	"*://*.soundcloud.com/*",
     	"storage"
     ],
     "background": {
@@ -13,9 +13,8 @@
     	"persistent": false
     },
     "browser_action": {
-      // "default_popup": "popup.html",
-      "default_title": "Remove Reposts",
-      "default_icon": "icon.png"
+      "default_title": "SoundFilter",
+      "default_icon": "icon_16.png"
     },
     "content_scripts": [
     	{
