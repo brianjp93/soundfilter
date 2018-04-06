@@ -1,10 +1,10 @@
 chrome.storage.sync.get(['repost_remove'], function(result) {
+	var next_value;
 	if (result.repost_remove !== true) {
-		chrome.storage.sync.set({'repost_remove': true});
-		console.log('Repost removal was enabled.');
+		next_value = true;
 	}
 	else {
-		chrome.storage.sync.set({'repost_remove': false});
-		console.log('Repost removal has been disabled.');
-	}	
+		next_value = false;
+	}
+	chrome.storage.sync.set({'repost_remove': next_value});
 });

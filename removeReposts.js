@@ -5,11 +5,11 @@ function removeReposts() {
 			for (var i=0; i<soundlist__items.length; i++) {
 				var e = soundlist__items[i];
 				if (e.getElementsByClassName('soundContext__repost').length >= 1) {
-					e.style.display = 'none';
+					// e.style.display = 'none';
 
 					// If we remove the listitem, we need to decrement our counter
-					// e.remove();
-					// i--;
+					e.remove();
+					i--;
 				}
 			}
 		}

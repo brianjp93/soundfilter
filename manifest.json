@@ -1,7 +1,7 @@
  {
     "name": "SoundFilter",
     "description" : "Remove reposts from soundcloud feed.",
-    "version": "1.0",
+    "version": "1.1",
     "manifest_version": 2,
     "permissions": [
     	"activeTab",
