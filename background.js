@@ -1,7 +1,7 @@
 // listen for our browerAction to be clicked
 chrome.browserAction.onClicked.addListener(function (tab) {
 	// for the current tab, inject the "inject.js" file & execute it
-	console.log('removePosts.js running.');
+	// console.log('Soundfilter running.');
 	chrome.tabs.executeScript(tab.id, {
 		file: 'toggle.js'
 	});
@@ -18,7 +18,6 @@ function set_badge() {
 	})
 }
 
-delay = 1000;
-if (set_badge_interval === undefined) {
-	var set_badge_interval = setInterval(set_badge, delay)
-}
+chrome.storage.onChanged.addListener(function() {
+    set_badge()
+})

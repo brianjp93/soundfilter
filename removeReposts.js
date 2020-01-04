@@ -2,6 +2,7 @@ function removeReposts() {
 	chrome.storage.sync.get(['repost_remove'], function(result) {
 		if (result.repost_remove === true) {
 			var soundlist__items = document.getElementsByClassName('soundList__item');
+			var items_removed = false;
 			for (var i=0; i<soundlist__items.length; i++) {
 				var e = soundlist__items[i];
 				if (e.getElementsByClassName('soundContext__repost').length >= 1) {
@@ -9,6 +10,7 @@ function removeReposts() {
 
 					// If we remove the listitem, we need to decrement our counter
 					e.remove();
+					items_removed = true;
 					i--;
 				}
 			}

@@ -1,7 +1,7 @@
  {
     "name": "SoundFilter",
     "description" : "Remove reposts from soundcloud feed.",
-    "version": "1.2",
+    "version": "1.5",
     "manifest_version": 2,
     "permissions": [
     	"activeTab",
@@ -17,9 +17,9 @@
       "default_icon": "icon_16.png"
     },
     "icons": { 
-            "16": "icon16.png",
-            "48": "icon48.png",
-            "128": "icon128.png" 
+            "16": "icon_16.png",
+            "48": "icon_48.png",
+            "128": "icon_128.png" 
     },
     "content_scripts": [
     	{
